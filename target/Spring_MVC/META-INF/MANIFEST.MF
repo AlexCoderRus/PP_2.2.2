@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Created-By: IntelliJ IDEA
-Built-By: 6430u
-Build-Jdk: Oracle OpenJDK version 19
-

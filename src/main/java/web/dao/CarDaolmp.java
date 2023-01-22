@@ -21,7 +21,7 @@ public class CarDaolmp implements CarDao{
 
     @Override
     public List<Car> getCarList(int count) {
-        if ((count == 0) || (count >= 5)) {
+        if ((count < 0) || (count >= 5)) {
             return carList;
         }
         return carList.stream().limit(count).collect(Collectors.toList());

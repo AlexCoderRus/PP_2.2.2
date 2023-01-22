@@ -19,7 +19,7 @@ public class CarController {
    // https://translated.turbopages.org/proxy_u/en-ru.ru.c14f272c-63a6156f-c5c5270d-74722d776562/https/stackoverflow.com/questions/59160936/how-to-set-default-value-on-field-values-in-a-class-used-in-spring-boot-request
 
     @GetMapping("/cars")
-    public String cars(@RequestParam("count") Optional<Integer> count, Model model) {
+    public String cars(@RequestParam(defaultValue = "5") Optional<Integer> count, Model model) {
         model.addAttribute("carsToShow", carService.getCarList(count.orElse(0)));
         return "cars";
     }
